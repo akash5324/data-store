@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light  mt 0 " style="background-color: grey;">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/"><button class="btn btn-dark" type="button">Home <span class="sr-only">(current)</span></button></a>
+      </li>
+      {{#if user}}
+      <li class="nav-item">
+        <a class="nav-link" href="/viewData"><button class="btn btn-dark" type="button">View Data</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/addData"><button class="btn btn-dark" type="button">Add Data</button></a>
+      </li>
+      {{/if}}
+       </ul>
+         <ul class="navbar-nav ml-auto">
+       {{#if user}}
+       
+        <li class="nav-item">
+          <a href="/logout" class="nav-link"><button class="btn btn-dark" type="button">Log Out</button></a>
+        </li>
+
+      {{else}}
+     
+        <li class="nav-item">
+          <a href="/login" class="nav-link"><button class="btn btn-dark" type="button">Login</button></a>
+        </li>
+        <li class="nav-item">
+          <a href="/signup" class="nav-link"><button class="btn btn-dark" type="button">Register</button></a>
+        </li>
+           {{/if}}
+      </ul>
+
+   
+  </div>
+</nav>
